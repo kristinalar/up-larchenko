@@ -84,6 +84,10 @@ namespace up_larchenko
                 message = "ТЫДЫЩ!!!!! Дверь не просто открывается — её выбивает ударная волна!";
 
             MessageBox.Show(message, "Испытание двери", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // После MessageBox с результатом силы
+            var afterDoorForm = new AfterDoorForm(player);
+            afterDoorForm.ShowDialog(); // или .Show(), но ShowDialog() лучше для линейного сценария
         }
     }
 }
