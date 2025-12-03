@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AfterDoorForm));
             label1 = new Label();
             btnOpenInventory = new Button();
+            BtnDungeon1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -47,13 +48,24 @@
             // btnOpenInventory
             // 
             btnOpenInventory.Font = new Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            btnOpenInventory.Location = new Point(401, 287);
+            btnOpenInventory.Location = new Point(28, 206);
             btnOpenInventory.Name = "btnOpenInventory";
             btnOpenInventory.Size = new Size(154, 29);
             btnOpenInventory.TabIndex = 1;
             btnOpenInventory.Text = "Заглянуть в сумку";
             btnOpenInventory.UseVisualStyleBackColor = true;
             btnOpenInventory.Click += btnOpenInventory_Click;
+            // 
+            // BtnDungeon1
+            // 
+            BtnDungeon1.Font = new Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            BtnDungeon1.Location = new Point(351, 284);
+            BtnDungeon1.Name = "BtnDungeon1";
+            BtnDungeon1.Size = new Size(172, 29);
+            BtnDungeon1.TabIndex = 2;
+            BtnDungeon1.Text = "Войти в подземелье";
+            BtnDungeon1.UseVisualStyleBackColor = true;
+            BtnDungeon1.Click += BtnDungeon1_Click;
             // 
             // AfterDoorForm
             // 
@@ -62,6 +74,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(582, 353);
+            Controls.Add(BtnDungeon1);
             Controls.Add(btnOpenInventory);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -78,5 +91,6 @@
 
         private Label label1;
         private Button btnOpenInventory;
+        private Button BtnDungeon1;
     }
 }

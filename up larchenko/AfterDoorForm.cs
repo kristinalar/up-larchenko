@@ -6,7 +6,7 @@ namespace up_larchenko
 {
     public partial class AfterDoorForm : Form
     {
-        private Player player; // передаём игрока, чтобы передать в инвентарь
+        private Player player; 
 
         public AfterDoorForm(Player player)
         {
@@ -23,7 +23,14 @@ namespace up_larchenko
         private void btnOpenInventory_Click(object sender, EventArgs e)
         {
             var inventoryForm = new InventoryForm(this.player);
-            inventoryForm.Show(); // ← Просто открываем, НЕ закрываем эту форму
+            inventoryForm.Show();
+        }
+
+        private void BtnDungeon1_Click(object sender, EventArgs e)
+        {
+            var dungeonForm = new DungeonForm(player);
+            dungeonForm.FormClosed += (s, args) => this.Close(); 
+            dungeonForm.ShowDialog();
         }
     }
 }
